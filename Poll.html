@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>IMAGE POLL</title>
+        <style>
+            .row {
+                display: flex;
+            }
+            .column {
+                flex: 25%;
+                padding: 5px;
+            }
+            .logoandtext{
+                margin: 0px;
+                background-color: #185874;
+            }
+            .logo{
+                margin-top: 10px;
+                margin-right: 10px;
+                float:inline-start;
+                width: 50%;
+            }
+            h1{
+                margin-top: 80px;
+                margin-right: 10px;
+                margin-left: 0;
+                float: inline-start;
+                align-content: center;
+                width: 50%;
+                font-size: xx-large;
+            }
+        </style>
+        <script src="Poll.js"></script>
+    </head>
+
+    <body onload="inputName()">
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-database.js"></script>
+        <table style="background-color: #185874; width: 100%;">
+            <tr id="hide">
+                <td style="width: 25%;">
+
+                </td>
+                <td style="width: 25%;">
+                    <img src="QuestionMark.png" height="275" width="275" style="margin:10px;">
+                </td>
+                <td style="width: 25%;">
+                    <h1 style="align-self: center; font-size: 80;color: #ffffff;">Image Poll</h1>
+                </td>
+                <td style="width: 25%;">
+                </td>
+            </tr>
+        </table>
+        <marquee id="marqueehide" behavior="alternate" direction="left" style="color: #103d50;"><h1>VOTE FOR ALL THE LOGOS IN YOUR ORDER OF PREFERENCE!</h1></marquee>
+        <div class="row" id="div1" style="align-content: center;">
+            <div class="column" id="image1" style="border: #000000;border-radius: 6px; border-style: solid;margin: 5px;align-content: center;">
+                <img src="image1.png"  style="margin-right:10px;margin-top:10px;width: 100%;" onclick="image1()">
+                <h2 id="selector1" style="text-align: center; margin: auto;"></h2>
+            </div>
+            <div class="column" id="image2" style="border: #000000;border-radius: 6px; border-style: solid;margin: 5px;">
+                <img src="image2.png" style="margin-right:10px;margin-top:10px;width: 100%;" onclick="image2()">
+                <h2 id="selector2" style="text-align: center; margin: auto;"></h2>
+            </div>
+        </div>
+        <div class="row" id="div2" style="align-content: center;">
+            <div class="column" id="image1" style="border: #000000;border-radius: 6px; border-style: solid;margin: 5px;">
+                <img src="image3.png"  style="margin-right:10px;margin-bottom:20px;width: 100%;" onclick="image3()">
+                <h2 id="selector3" style="text-align: center; margin: auto;"></h2>
+            </div>
+            <div class="column" id="image2" style="border: #000000;border-radius: 6px; border-style: solid;margin: 5px;">
+                <img src="image4.png" style="margin-right:10px;margin-top:10px;width: 100%;" onclick="image4()">
+                <h2 id="selector4" style="text-align: center; margin: auto;"></h2>
+            </div>
+        </div>
+
+        <div class="row" id = "submitbutton" style="text-align: center;margin-top: 50px; ">
+            <button type="submit" style="margin: auto;text-align: center;font-size: 40; color: #000000; background-color: #4CAF50; font-family: 'Times New Roman', Times, serif;border-style: solid;border-radius: 6px;" onclick="submit()">
+                SUBMIT
+            </button>
+        </div>
+        <marquee behavior="alternate" direction="left" style="color: #103d50;"><h1 id="endmarqueeh1"> </h1></marquee>
+    </body>
+</html> 
